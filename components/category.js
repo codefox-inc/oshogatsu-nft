@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const Category = (props) => {
   return (
@@ -50,16 +50,16 @@ const Category = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
 Category.defaultProps = {
-  image_alt: 'image',
-  image_src: 'https://play.teleporthq.io/static/svg/placeholders/no-image.svg',
-  name: 'カテゴリー',
-  link: '',
-  sub_name: 'サブカテゴリー',
-}
+  image_alt: "image",
+  image_src: "https://play.teleporthq.io/static/svg/placeholders/no-image.svg",
+  name: "カテゴリー",
+  link: "",
+  sub_name: "サブカテゴリー",
+};
 
 Category.propTypes = {
   image_alt: PropTypes.string,
@@ -67,6 +67,6 @@ Category.propTypes = {
   name: PropTypes.string,
   link: PropTypes.string,
   sub_name: PropTypes.string,
-}
+};
 
-export default Category
+export default Category;

@@ -1,5 +1,5 @@
 {
-  "name": "copy-of-nft-store-test",
+  "name": "2023-newyear-nft",
   "version": "1.0.0",
   "description": "A next project generated based on a UIDL document",
   "main": "index.js",
@@ -7,13 +7,15 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "format": "prettier --write ."
   },
   "author": "TeleportHQ",
   "license": "MIT",
   "dependencies": {
     "@lottiefiles/lottie-player": "1.6.0",
     "@rainbow-me/rainbowkit": "^0.8.1",
+    "axios": "^1.2.1",
     "ethers": "^5.7.2",
     "next": "^12.1.0",
     "prop-types": "15.7.2",
@@ -22,8 +24,6 @@
     "wagmi": "^0.9.5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.0.24"
+    "prettier": "^2.8.1"
   }
 }

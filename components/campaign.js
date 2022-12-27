@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const Campaign = (props) => {
   return (
@@ -76,21 +76,21 @@ const Campaign = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
 Campaign.defaultProps = {
-  image_src_mobile: '/playground_assets/crypto-banner-654%C3%97336-1200w.png',
-  alt: 'キャンペーン',
-  link: '',
-  image_src: '/playground_assets/crypto-banner-1440%C3%97272-1100w.png',
-}
+  image_src_mobile: "/playground_assets/crypto-banner-654%C3%97336-1200w.png",
+  alt: "キャンペーン",
+  link: "",
+  image_src: "/playground_assets/crypto-banner-1440%C3%97272-1100w.png",
+};
 
 Campaign.propTypes = {
   image_src_mobile: PropTypes.string,
   alt: PropTypes.string,
   link: PropTypes.string,
   image_src: PropTypes.string,
-}
+};
 
-export default Campaign
+export default Campaign;

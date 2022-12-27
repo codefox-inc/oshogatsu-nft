@@ -1,8 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
+  --dl-color-scheme-os: #1868b7ff;
   --dl-size-size-large: 144px;
   --dl-size-size-small: 48px;
   --dl-size-size-medium: 96px;
@@ -12,10 +9,11 @@
   --dl-size-size-xxlarge: 288px;
   --dl-color-scheme-black: #0f1722ff;
   --dl-color-scheme-brown: #914332ff;
-  --dl-color-scheme-white: #FFFFFF;
+  --dl-color-scheme-white: #ffffff;
   --dl-size-size-maxwidth: 1400px;
   --dl-radius-radius-round: 50%;
   --dl-color-scheme-black80: #191919cc;
+  --dl-color-scheme-primary: #ff8a00ff;
   --dl-color-scheme-white80: #ffffffcc;
   --dl-space-space-halfunit: 8px;
   --dl-space-space-sixunits: 96px;
@@ -32,6 +30,7 @@
   --dl-space-space-threeunits: 48px;
   --dl-color-scheme-darkgray50: #9095a780;
   --dl-color-scheme-lightbrown: #f9f4f0ff;
+  --dl-color-scheme-orangedisabled: #e87f05ff;
   --dl-space-space-oneandhalfunits: 24px;
 }
 .button {
@@ -67,7 +66,7 @@
   margin: 1em 0px 1em 0px;
   display: block;
   padding: 0px 0px 0px 1.5rem;
-  list-style-type: none;
+  list-style-type: disc;
   list-style-position: outside;
 }
 .list-item {
@@ -115,20 +114,35 @@
   margin-right: var(--dl-space-space-unit);
   flex-direction: column;
 }
-.button-primary {
-  color: var(--dl-color-scheme-white);
+.button-mint {
+  color: var(--dl-color-scheme-primary);
   cursor: pointer;
   font-style: normal;
-  transition: 0.3s;
+  transition: 0.15s;
   font-weight: 700;
   line-height: 1;
-  border-color: transparent;
+  border-color: var(--dl-color-scheme-primary);
+  border-width: 2px;
   border-radius: var(--dl-radius-radius-radius4);
-  background-color: var(--dl-color-scheme-brown);
+  background-color: var(--dl-color-scheme-white);
 }
-.button-primary:hover {
-  color: var(--dl-color-scheme-darkblue);
-  background-color: rgba(0, 0, 0, 0.1);
+.button-mint:hover {
+  color: var(--dl-color-scheme-white);
+  background-color: var(--dl-color-scheme-primary);
+}
+.button-minted {
+  color: var(--dl-color-scheme-os);
+  cursor: pointer;
+  font-style: normal;
+  transition: 0.15s;
+  font-weight: 700;
+  line-height: 1;
+  border-color: var(--dl-color-scheme-white);
+  border-width: 2px;
+  background-color: var(--dl-color-scheme-white);
+}
+.button-minted:hover {
+  border-bottom-color: var(--dl-color-scheme-os);
 }
 .button-lg {
   padding-top: 20px;
@@ -165,20 +179,17 @@
   padding-right: 24px;
   padding-bottom: 12px;
 }
-.button-secondary {
-  color: #191919;
+.button-minting {
+  color: var(--dl-color-scheme-white80);
   cursor: pointer;
   font-style: normal;
-  transition: 0.3s;
+  transition: 0.15s;
   font-weight: 700;
   line-height: 1;
-  border-color: transparent;
+  border-color: var(--dl-color-scheme-primary);
+  border-width: 2px;
   border-radius: var(--dl-radius-radius-radius4);
-  background-color: rgba(0, 0, 0, 0.1);
-}
-.button-secondary:hover {
-  color: var(--dl-color-scheme-white);
-  background-color: var(--dl-color-scheme-brown);
+  background-color: var(--dl-color-scheme-orangedisabled);
 }
 .button-secondary-white {
   color: #191919;
@@ -259,10 +270,10 @@
   padding-bottom: 10px;
 }
 .tab-selector-btn:hover {
-  box-shadow: inset 0px -2px 0px #B6472F;
+  box-shadow: inset 0px -2px 0px #b6472f;
 }
 .tab-selector-btn:active {
-  box-shadow: inset 0px -2px 0px #B6472F;
+  box-shadow: inset 0px -2px 0px #b6472f;
 }
 .hide-scrollbar {
   scrollbar-width: none;
@@ -311,12 +322,12 @@
   letter-spacing: 0.01em;
   text-decoration: none;
 }
-@media(max-width: 991px) {
+@media (max-width: 991px) {
   .slide {
     min-width: 75%;
   }
 }
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .section-container {
     padding-top: var(--dl-space-space-twounits);
     padding-bottom: var(--dl-space-space-oneandhalfunits);
@@ -325,14 +336,6 @@
     min-width: 80%;
     margin-left: var(--dl-space-space-halfunit);
     margin-right: var(--dl-space-space-halfunit);
-  }
-  .button-md {
-    text-align: center;
-  }
-  .button-secondary {
-    text-align: center;
-    margin-right: 0px;
-    margin-bottom: var(--dl-space-space-unit);
   }
   .button-secondary-white {
     text-align: center;
@@ -343,8 +346,14 @@
     text-align: center;
   }
 }
-@media(max-width: 479px) {
-  .button-primary {
+@media (max-width: 479px) {
+  .button-mint {
+    padding-top: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+  }
+  .button-minted {
     padding-top: 20px;
     padding-left: 24px;
     padding-right: 24px;

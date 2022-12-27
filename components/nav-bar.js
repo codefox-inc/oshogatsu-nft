@@ -1,10 +1,7 @@
-import React from 'react'
+import React from "react";
 
-import PropTypes from 'prop-types'
-
-import {
-  MyConnectButton,
-} from "./my-connect-button";
+import PropTypes from "prop-types";
+import { MyConnectButton } from "./my-connect-button";
 
 const NavBar = (props) => {
   return (
@@ -16,8 +13,7 @@ const NavBar = (props) => {
             src={props.image_src}
             className="nav-bar-image"
           />
-          <MyConnectButton
-          />
+          <MyConnectButton />
         </div>
       </header>
       <style jsx>
@@ -39,16 +35,14 @@ const NavBar = (props) => {
             position: relative;
             max-width: var(--dl-size-size-maxwidth);
             align-items: center;
-            padding-top: var(--dl-space-space-unit);
+            padding-top: var(--dl-space-space-oneandhalfunits);
             padding-left: var(--dl-space-space-oneandhalfunits);
             padding-right: var(--dl-space-space-oneandhalfunits);
-            padding-bottom: var(--dl-space-space-unit);
+            padding-bottom: var(--dl-space-space-oneandhalfunits);
             justify-content: space-between;
           }
           .nav-bar-image {
-            width: auto;
-            max-width: var(--dl-size-size-large);
-            max-height: auto;
+            height: 2rem;
           }
           .nav-bar-nav {
             flex: 0 0 auto;
@@ -59,71 +53,34 @@ const NavBar = (props) => {
           .nav-bar-register {
             margin-left: var(--dl-space-space-twounits);
           }
-          .nav-bar-burger-menu {
-            display: none;
-          }
-          .nav-bar-icon {
-            fill: var(--dl-color-scheme-darkblue);
-            width: 24px;
-            height: 24px;
-            display: flex;
-          }
-          .nav-bar-mobile-menu {
-            display: none;
-          }
-          .nav-bar-nav1 {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: var(--dl-space-space-oneandhalfunits);
-            flex-direction: column;
-          }
-          .nav-bar-container {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            margin-bottom: var(--dl-space-space-threeunits);
-            justify-content: space-between;
-          }
-          .nav-bar-close-mobile-menu {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-          .nav-bar-icon2 {
-            width: 24px;
-            height: 24px;
-          }
-          @media (max-width: 991px) {
-            .nav-bar-nav {
-              display: none;
-            }
-            .nav-bar-burger-menu {
-              display: flex;
-            }
-          }
           @media (max-width: 767px) {
             .nav-bar-max-width {
-              padding: var(--dl-space-space-unit);
+              padding-top: var(--dl-space-space-unit);
+              padding-bottom: var(--dl-space-space-unit);
+            }
+          }
+          @media (max-width: 479px) {
+            .nav-bar-max-width {
+              padding-left: var(--dl-space-space-unit);
+              padding-right: var(--dl-space-space-unit);
             }
           }
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
 NavBar.defaultProps = {
-  image_src: '/playground_assets/jp-post-new-logo-img.svg',
-  button: 'Wallet Connect',
-  button2: 'Get in touch',
-  image_alt: 'logo',
-}
+  image_src: "https://play.teleporthq.io/static/svg/placeholders/no-image.svg",
+  button: "Wallet Connect",
+  image_alt: "logo",
+};
 
 NavBar.propTypes = {
   image_src: PropTypes.string,
   button: PropTypes.string,
-  button2: PropTypes.string,
   image_alt: PropTypes.string,
-}
+};
 
-export default NavBar
+export default NavBar;

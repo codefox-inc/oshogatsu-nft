@@ -3,35 +3,33 @@ import "./style.css";
 import React from "react";
 
 import "@rainbow-me/rainbowkit/styles.css";
-import {
-  getDefaultWallets,
-  RainbowKitProvider
-} from "@rainbow-me/rainbowkit";
-import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
+
+import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { configureChains, createClient, WagmiConfig } from "wagmi";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
-
+import { polygon } from "wagmi/chains";
 import { goerli } from "../constant/network";
 
 const { chains, provider } = configureChains(
-  [goerli],
-  [alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_ID }), publicProvider()]
+  [goerli, polygon],
+  [
+    alchemyProvider({ apiKey: "y8qlo3CaD9LfXJLHd0Jy7c3GfZXAssY7" }),
+    publicProvider(),
+  ]
 );
 const { connectors } = getDefaultWallets({
-  appName: "My RainbowKit App",
-  chains
+  appName: "NewYear NFT",
+  chains,
 });
 
 const wagmiClient = createClient({
   autoConnect: true,
   connectors,
-  provider
+  provider,
 });
 
-export default function MyApp({
-  Component: Component,
-  pageProps: pageProps
-}) {
+export default function MyApp({ Component: Component, pageProps: pageProps }) {
   React.useEffect(() => import("@lottiefiles/lottie-player"));
   return (
     <WagmiConfig client={wagmiClient}>
@@ -39,5 +37,5 @@ export default function MyApp({
         <Component {...pageProps} />;
       </RainbowKitProvider>
     </WagmiConfig>
-  )
+  );
 }

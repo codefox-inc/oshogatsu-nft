@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 const NavLinks = (props) => {
   return (
@@ -75,16 +75,16 @@ const NavLinks = (props) => {
         `}
       </style>
     </>
-  )
-}
+  );
+};
 
 NavLinks.defaultProps = {
-  link3: 'Portofolio',
-  rootClassName: '',
-  link2: 'About',
-  link4: 'Blog',
-  link1: 'Home',
-}
+  link3: "Portofolio",
+  rootClassName: "",
+  link2: "About",
+  link4: "Blog",
+  link1: "Home",
+};
 
 NavLinks.propTypes = {
   link3: PropTypes.string,
@@ -92,6 +92,6 @@ NavLinks.propTypes = {
   link2: PropTypes.string,
   link4: PropTypes.string,
   link1: PropTypes.string,
-}
+};
 
-export default NavLinks
+export default NavLinks;
