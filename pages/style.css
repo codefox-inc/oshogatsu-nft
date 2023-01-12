@@ -329,6 +329,7 @@
   letter-spacing: 0.01em;
   text-decoration: none;
 }
+
 @media (max-width: 991px) {
   .slide {
     min-width: 75%;

@@ -196,8 +196,13 @@ const Home = (props) => {
                   <a
                     href="https://jpyc.co.jp/"
                     target="_blank"
+<<<<<<< HEAD
                     rel="noreferrer noopener collablink"
                     className="home-link02"
+=======
+                    rel="noreferrer noopener"
+                    className="home-link02 collablink"
+>>>>>>> a0e02d5d31159ca61077d1e90c0c5a544d584f82
                   >
                     JPYC株式会社
                   </a>
@@ -233,7 +238,7 @@ const Home = (props) => {
                   href="https://hiroshima-dao.com/"
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="home-link09"
+                  className="home-link09 collablink"
                 >
                   <img
                     alt="image"
