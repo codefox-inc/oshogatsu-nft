@@ -65,6 +65,12 @@ const NavBar = (props) => {
               padding-right: var(--dl-space-space-unit);
             }
           }
+          .nav-bar-register {
+            padding-top: var(--dl-space-space-halfunit);
+            padding-left: var(--dl-space-space-unit);
+            padding-right: var(--dl-space-space-unit);
+            padding-bottom: var(--dl-space-space-halfunit);
+          }
         `}
       </style>
     </>

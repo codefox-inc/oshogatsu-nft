@@ -68,7 +68,7 @@ export function GasFreeMintButton(props) {
   const onClickMinted = () => {
     if (contractAddressMap[props.name]) {
       window.open(
-        `https://testnets.opensea.io/ja/assets/goerli/${
+        `https://opensea.io/ja/assets/matic/${
           contractAddressMap[props.name]
         }/${tokenId}`
       );

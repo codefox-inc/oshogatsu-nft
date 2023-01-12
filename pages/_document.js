@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class CustomDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html lang="ja">
         <Head>
           <meta
             name="viewport"
@@ -26,6 +26,12 @@ class CustomDocument extends Document {
             data-tag="default-style-sheet"
           ></style>
           <link
+            rel="shortcut icon"
+            href="/playground_assets/only_logo.png"
+            type="icon/png"
+            sizes="32x32"
+          ></link>
+          <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&amp;display=swap"
             data-tag="font"
@@ -45,6 +51,18 @@ class CustomDocument extends Document {
         <body>
           <Main></Main>
           <NextScript></NextScript>
+          <script
+            type="text/javascript"
+            src="https://www.googletagmanager.com/gtag/js?id=G-1W5ZSY8BB6"
+            async
+          ></script>
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html:
+                "window.dataLayer = window.dataLayer || [];\n        function gtag(){dataLayer.push(arguments);}\n        gtag('js', new Date());\n        gtag('config', 'G-1W5ZSY8BB6');",
+            }}
+          ></script>
           <div
             dangerouslySetInnerHTML={{
               __html:

@@ -282,6 +282,13 @@
 .hide-scrollbar\:\:-webkit-scrollbar {
   display: none;
 }
+.collablink {
+  transition: 0.3s;
+  text-decoration: unset;
+}
+.collablink:hover {
+  color: var(--dl-color-scheme-brown);
+}
 .Navigation-Link {
   font-size: 16px;
   font-family: Noto Sans JP;
@@ -348,10 +355,10 @@
 }
 @media (max-width: 479px) {
   .button-mint {
-    padding-top: 20px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 20px;
+    padding-top: var(--dl-space-space-halfunit);
+    padding-left: var(--dl-space-space-unit);
+    padding-right: var(--dl-space-space-unit);
+    padding-bottom: var(--dl-space-space-halfunit);
   }
   .button-minted {
     padding-top: 20px;
